@@ -1,0 +1,5 @@
+#!/bin/bash
+CFILE="your_c_file.c"  # Replace with your actual C file name
+
+BASENAME=$(basename "$CFILE" .c)
+gcc -S -masm=intel "$CFILE" -o "$BASENAME.s"
